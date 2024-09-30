@@ -1,4 +1,4 @@
-package br.com.bernardo.projeto_integrador_ii;
+package br.com.bernardo.projeto_integrador_ii.controller;
 
 import br.com.bernardo.projeto_integrador_ii.entity.User;
 import br.com.bernardo.projeto_integrador_ii.service.UserService;
@@ -12,7 +12,6 @@ public class UserController {
 
     private final UserService userService;
 
-    // Injeção de dependência via construtor
     public UserController(UserService userService) {
         this.userService = userService;
     }
