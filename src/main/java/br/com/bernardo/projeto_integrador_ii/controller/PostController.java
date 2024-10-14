@@ -26,4 +26,18 @@ public class PostController {
         return postService.getAllPosts();
     }
 
+    @PostMapping("/{postId}/like/user/{userId}")
+    public void likePost(@PathVariable Long postId, @PathVariable Long userId) {
+        postService.likePost(userId, postId);
+    }
+
+    @DeleteMapping("/{postId}/like/user/{userId}")
+    public void deletePost(@PathVariable Long postId, @PathVariable Long userId) {
+        postService.unlikePost(userId, postId);
+    }
+
+    @GetMapping("/{postId}/likes/count")
+    public int getLikeCount(@PathVariable Long postId) {
+        return postService.getLikesCount(postId);
+    }
 }

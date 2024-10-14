@@ -4,8 +4,10 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+import java.util.Set;
 
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 
 @Entity
@@ -29,6 +31,9 @@ public class Post {
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
+
+    @OneToMany(mappedBy = "post", orphanRemoval = true)
+    private Set<Like> likes = new HashSet<>();
 
     public Post() {
     }
@@ -87,5 +92,17 @@ public class Post {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public Set<Like> getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Set<Like> likes) {
+        this.likes = likes;
+    }
+
+    public int getLikesCount() {
+        return likes.size();
     }
 }
