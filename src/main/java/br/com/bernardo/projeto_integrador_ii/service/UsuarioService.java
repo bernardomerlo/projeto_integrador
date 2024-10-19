@@ -7,6 +7,7 @@ import java.util.UUID;
 import br.com.bernardo.projeto_integrador_ii.dto.UsuarioDTO;
 import br.com.bernardo.projeto_integrador_ii.entity.UsuarioEntity;
 import br.com.bernardo.projeto_integrador_ii.entity.UsuarioVerificadorEntity;
+import br.com.bernardo.projeto_integrador_ii.entity.enums.TipoSituacaoUsuario;
 import br.com.bernardo.projeto_integrador_ii.repository.UsuarioRepository;
 import br.com.bernardo.projeto_integrador_ii.repository.UsuarioVerificadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;

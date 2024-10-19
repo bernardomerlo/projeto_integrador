@@ -1,8 +1,8 @@
 package br.com.bernardo.projeto_integrador_ii.dto;
 
+import br.com.bernardo.projeto_integrador_ii.entity.PermissaoPerfilRecursoEntity;
 import org.springframework.beans.BeanUtils;
 
-import br.com.napoleao.projeto.entity.PermissaoPerfilRecursoEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

@@ -2,9 +2,9 @@ package br.com.bernardo.projeto_integrador_ii.dto;
 
 import java.util.Objects;
 
+import br.com.bernardo.projeto_integrador_ii.entity.RecursoEntity;
 import org.springframework.beans.BeanUtils;
 
-import br.com.napoleao.projeto.entity.RecursoEntity;
 
 public class RecursoDTO {
 

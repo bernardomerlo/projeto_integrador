@@ -1,5 +1,6 @@
 package br.com.bernardo.projeto_integrador_ii.dto;
 
+import br.com.bernardo.projeto_integrador_ii.entity.PerfilUsuarioEntity;
 import org.springframework.beans.BeanUtils;
 
 
