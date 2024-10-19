@@ -1,7 +1,8 @@
 package br.com.bernardo.projeto_integrador_ii.controller;
 
 import br.com.bernardo.projeto_integrador_ii.entity.User;
-import br.com.bernardo.projeto_integrador_ii.service.UserService;
+
+import br.com.bernardo.projeto_integrador_ii.service.UsuarioService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,9 +11,9 @@ import java.util.List;
 @RequestMapping("/api/users")
 public class UserController {
 
-    private final UserService userService;
+    private final UsuarioService userService;
 
-    public UserController(UserService userService) {
+    public UserController(UsuarioService userService) {
         this.userService = userService;
     }
 
