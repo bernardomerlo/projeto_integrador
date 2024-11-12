@@ -27,7 +27,7 @@ public class CommentService {
     public Comment addComment(Long postId, Long userId, Comment comment) {
         Post post = postRepository.findById(postId)
                 .orElseThrow(() -> new RuntimeException("Post não encontrado"));
-        User user = userRepository.findById(userId)
+        User user = userRepository.findById(String.valueOf(userId))
                 .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
         comment.setPost(post);
         comment.setUser(user);
