@@ -2,6 +2,8 @@ package br.com.bernardo.projeto_integrador_ii.entity;
 
 import java.util.Objects;
 
+import br.com.bernardo.projeto_integrador_ii.dto.UsuarioDTO;
+import br.com.bernardo.projeto_integrador_ii.entity.enums.TipoSituacaoUsuario;
 import org.springframework.beans.BeanUtils;
 
 import jakarta.persistence.Column;

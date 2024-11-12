@@ -1,5 +1,7 @@
 package br.com.bernardo.projeto_integrador_ii.service;
 
+import br.com.bernardo.projeto_integrador_ii.entity.UsuarioEntity;
+import br.com.bernardo.projeto_integrador_ii.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

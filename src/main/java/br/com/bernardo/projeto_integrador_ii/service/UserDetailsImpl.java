@@ -1,5 +1,6 @@
 package br.com.bernardo.projeto_integrador_ii.service;
 
+import br.com.bernardo.projeto_integrador_ii.entity.UsuarioEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -13,6 +14,10 @@ public class UserDetailsImpl implements UserDetails {
     private String email;
     private String password;
     private Collection<? extends GrantedAuthority> authorities;
+
+    public static UserDetails build(UsuarioEntity usuario) {
+        return null;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
