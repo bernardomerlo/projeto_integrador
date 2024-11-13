@@ -2,6 +2,10 @@ package br.com.bernardo.projeto_integrador_ii.infra.security;
 
 
 import br.com.bernardo.projeto_integrador_ii.entity.User;
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTCreationException;
+import com.auth0.jwt.exceptions.JWTVerificationException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +23,7 @@ public class TokenService {
         try {
             Algorithm algorithm = Algorithm.HMAC256(secret);
 
-            String token = JWT.create()
+            String token = com.auth0.jwt.JWT.create()
                     .withIssuer("login-auth-api")
                     .withSubject(user.getEmail())
                     .withExpiresAt(this.generateExpirationDate())
@@ -33,7 +37,7 @@ public class TokenService {
     public String validateToken(String token){
         try {
             Algorithm algorithm = Algorithm.HMAC256(secret);
-            return JWT.require(algorithm)
+            return com.auth0.jwt.JWT.require(algorithm)
                     .withIssuer("login-auth-api")
                     .build()
                     .verify(token)

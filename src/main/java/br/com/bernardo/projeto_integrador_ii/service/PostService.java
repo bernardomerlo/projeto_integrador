@@ -2,8 +2,9 @@ package br.com.bernardo.projeto_integrador_ii.service;
 
 import br.com.bernardo.projeto_integrador_ii.entity.Post;
 import br.com.bernardo.projeto_integrador_ii.entity.User;
-import br.com.bernardo.projeto_integrador_ii.repository.PostRepository;
-import br.com.bernardo.projeto_integrador_ii.repository.UserRepository;
+
+import br.com.bernardo.projeto_integrador_ii.repositories.PostRepository;
+import br.com.bernardo.projeto_integrador_ii.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -22,7 +23,7 @@ public class PostService {
     }
 
     public Post createPost(Long userId, Post post) {
-        User user = userRepository.findById(userId)
+        User user = userRepository.findById(String.valueOf(userId))
                 .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
         post.setUser(user);
         post.setCreatedAt(new Date());

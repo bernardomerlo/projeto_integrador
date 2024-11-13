@@ -8,7 +8,6 @@ import br.com.bernardo.projeto_integrador_ii.entity.User;
 import br.com.bernardo.projeto_integrador_ii.infra.security.TokenService;
 import br.com.bernardo.projeto_integrador_ii.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,11 +19,17 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/auth")
-@RequiredArgsConstructor
+
 public class AuthController {
     private final UserRepository repository;
     private final PasswordEncoder passwordEncoder;
     private final TokenService tokenService;
+
+    public AuthController(UserRepository repository, PasswordEncoder passwordEncoder, TokenService tokenService) {
+        this.repository = repository;
+        this.passwordEncoder = passwordEncoder;
+        this.tokenService = tokenService;
+    }
 
     @PostMapping("/login")
     public ResponseEntity login(@RequestBody LoginRequestDTO body){
