@@ -1,4 +1,4 @@
-package br.com.bernardo.projeto_integrador_ii.repositories;
+package br.com.bernardo.projeto_integrador_ii.repository;
 
 import br.com.bernardo.projeto_integrador_ii.entity.Like;
 import br.com.bernardo.projeto_integrador_ii.entity.Post;
