@@ -3,6 +3,7 @@ package br.com.bernardo.projeto_integrador_ii.entity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import java.util.Set;
 
@@ -105,5 +106,10 @@ public class Post {
 
     public int getLikesCount() {
         return likes.size();
+    }
+
+    @JsonProperty("user_id")
+    public Long getUserId() {
+        return user != null ? user.getId() : null;
     }
 }

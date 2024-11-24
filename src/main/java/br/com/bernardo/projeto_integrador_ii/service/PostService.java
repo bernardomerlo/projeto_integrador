@@ -37,6 +37,7 @@ public class PostService {
     }
 
     public void likePost(Long userId, Long postId) {
+        System.out.println("Entrou aq");
         User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("Usuário nao encontrado!"));
         Post post = postRepository.findById(postId).orElse(null);
         if(likeRepository.findByUserAndPost(user, post).isPresent()) {
