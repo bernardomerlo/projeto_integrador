@@ -18,4 +18,10 @@ public class CommentController {
     public void postComment(@PathVariable Long postId ,@PathVariable Long userId, @RequestBody Comment comment) {
         this.commentService.addComment(postId, userId, comment);
     }
+
+    @GetMapping("/{postId}")
+    public long getCommentCount(@PathVariable Long postId) {
+        return this.commentService.getCommentCountByPostId(postId);
+    }
+
 }

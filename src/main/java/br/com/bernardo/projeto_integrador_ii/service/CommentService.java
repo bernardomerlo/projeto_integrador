@@ -35,5 +35,8 @@ public class CommentService {
         return commentRepository.save(comment);
     }
 
+    public long getCommentCountByPostId(Long postId) {
+        return commentRepository.countByPostId(postId);
+    }
 }
 
