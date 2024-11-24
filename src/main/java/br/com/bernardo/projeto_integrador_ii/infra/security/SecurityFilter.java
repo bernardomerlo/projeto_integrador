@@ -2,6 +2,7 @@ package br.com.bernardo.projeto_integrador_ii.infra.security;
 
 import br.com.bernardo.projeto_integrador_ii.entity.User;
 import br.com.bernardo.projeto_integrador_ii.repositories.UserRepository;
+import br.com.bernardo.projeto_integrador_ii.service.TokenService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

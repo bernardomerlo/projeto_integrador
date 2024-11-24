@@ -1,4 +1,4 @@
-package br.com.bernardo.projeto_integrador_ii.infra.cors;
+package br.com.bernardo.projeto_integrador_ii.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

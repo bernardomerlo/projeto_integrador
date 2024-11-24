@@ -1,5 +1,7 @@
-package br.com.bernardo.projeto_integrador_ii.infra.security;
+package br.com.bernardo.projeto_integrador_ii.config;
 
+import br.com.bernardo.projeto_integrador_ii.service.CustomUserDetailsService;
+import br.com.bernardo.projeto_integrador_ii.infra.security.SecurityFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

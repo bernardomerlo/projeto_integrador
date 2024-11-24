@@ -1,4 +1,4 @@
-package br.com.bernardo.projeto_integrador_ii.controllers;
+package br.com.bernardo.projeto_integrador_ii.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

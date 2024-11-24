@@ -1,13 +1,12 @@
-package br.com.bernardo.projeto_integrador_ii.controllers;
+package br.com.bernardo.projeto_integrador_ii.controller;
 
 
 import br.com.bernardo.projeto_integrador_ii.dto.LoginRequestDTO;
 import br.com.bernardo.projeto_integrador_ii.dto.RegisterRequestDTO;
 import br.com.bernardo.projeto_integrador_ii.dto.ResponseDTO;
 import br.com.bernardo.projeto_integrador_ii.entity.User;
-import br.com.bernardo.projeto_integrador_ii.infra.security.TokenService;
+import br.com.bernardo.projeto_integrador_ii.service.TokenService;
 import br.com.bernardo.projeto_integrador_ii.repositories.UserRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;

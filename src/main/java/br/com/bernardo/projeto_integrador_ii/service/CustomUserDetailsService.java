@@ -1,4 +1,4 @@
-package br.com.bernardo.projeto_integrador_ii.infra.security;
+package br.com.bernardo.projeto_integrador_ii.service;
 
 
 import br.com.bernardo.projeto_integrador_ii.entity.User;
