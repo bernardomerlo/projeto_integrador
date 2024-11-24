@@ -3,9 +3,7 @@ package br.com.bernardo.projeto_integrador_ii.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
@@ -22,6 +20,7 @@ public class User {
     private Long id;
 
     private String username;
+    private String fullname;
     private String email;
     private String password;
 
@@ -91,5 +90,13 @@ public class User {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 }
